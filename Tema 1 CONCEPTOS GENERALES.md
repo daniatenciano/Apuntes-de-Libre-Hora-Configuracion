@@ -1,12 +1,24 @@
 
 
+## HLC - Fullstack
+---
+![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hlc-fullstack.png)
+<small> 2018-19 - IES Luis Vélez de Guevara - Écija - Spain </small>
+
+
+## Conceptos generales
+
+[![cc-by-sa](http://jamj2000.github.io/hlc-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+
 ## Índice
 --- 
 - ### Introducción
-- ### DNS: Conceptos
-- ### DNS: Tipos de servidores
-- ### DNS: Resolución de nombres
-- ### DNS: Bind9
+- ### Tecnologías para el backend
+- ### Tecnologías para el frontend
+- ### MVC: Modelo-Vista-Controlador
+- ### SPA: Single Page Application 
+- ### Persistencia de los datos
 
 <!--- Note: Nota a pie de página. -->
 
@@ -17,324 +29,173 @@
 
 ### En esta Unidad aprenderemos a
 
-- Describir la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.
-- Identificar las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones Web desplegadas.
-- Identificar la función, elementos y estructuras lógicas del servicio de directorio.
-- Elaborar documentación relativa a las adaptaciones realizadas en los servicios de red.
+- Identificar las tecnologías base de la web.
+- Identfificar los lenguajes y frameworks usados en el lado del servidor.
+- Identfificar los lenguajes y frameworks usados en el lado del cliente.
+- Reconocer el patrón MVC.
+- Distinguir entre MPA y SPA.
+- Valorar la importancia de la persistencia de los datos.
 
 
+### La base de la web
 
-## DNS: Conceptos
+![HTML CSS Javascript](img/html-css-js.png)
 
+- **HTML**: Estructura del documento. `HTML5`. 
+- **CSS**: Formato/apariencia del documento. `CSS3`.
+- **Javascript**: Funcionalidad del documento. `ECMAScript6`.
 
-### DNS
+Note: Al final de línea se muestra la versión más relevante actualmente.
 
-- DNS (Domain Name System, sistema de nombres de dominio) 
-- Traduce nombres de equipos a direcciones IP y viceversa.
-  - Nombre <----> Dirección IP. 
-  - P. ej: www.google.es <----> 172.217.17.3
 
+### Partes de una aplicación web
 
-### DNS 
+![Backend-Frontend](img/frontend-backend.png)
 
-- Hace uso de una **base de datos distribuida** con información sobre equipos (hosts).
-- En los inicios de internet la información estaba centralizada.
-  - Para ello se utilizaba un archivo **HOST.TXT**.
-  - Estaba alojado en el Stanford Research Institute.
 
-- [Archivo hosts](https://es.wikipedia.org/wiki/Archivo_hosts)
+### Partes de una aplicación web
 
+- **Backend**: parte que se ejecuta en el servidor.
+  - Se encarga de atender las peticiones de los clientes.
+  - Suele tener soporte de almacenamiento de datos.
+  - También se denomina capa de acceso a datos
+- **Frontend**: parte que se ejecuta en el cliente.
+  - Se encarga de la experiencia del usuario (UX).
+  - Puede tener soporte de cache de datos.
+  - También se denomina capa de presentación.
 
-### FQDN
 
-- Fully Qualified Host/Domain Name (FQHN/FQDN) "nombre completo" de un equipo. 
-- Formado por el **hostname**, seguido de un punto y su correspondiente nombre de **dominio**.
-  - Por ejemplo, www.google.es.
-  - **www** es el hostname.
-  - **google.es** es el dominio.
 
+## Tecnologías para el backend
 
-### FQDN
 
-![Árbol DNS](img/dns-tree.png)
+### Lenguajes del lado del servidor
 
+![Backend Languages](img/backend-languages.png)
 
-### Niveles
 
-![Niveles DNS](img/dns-niveles.png)
+### Lenguajes del lado del servidor
 
+- **PHP**: PHP Hypertext Preprocessor. Uno de los lenguajes más utilizados para la creación de todo tipo de CMS.
+- **JSP**: JavaServer Pages. Es la propuesta de Java, y uno de los más demandados.
+- **ASP**: Active Server Pages. Es el lenguaje de desarrollo web de Microsoft. 
+- **Ruby**: es un lenguaje de programación interpretado, reflexivo y orientado a objetos.
+- **Python**: es un lenguaje de programación multiparadigma que hace hincapié en el código legible. 
+- **Javascript (Node.js)**: cada vez más popular puesto que se usa también en el lado cliente.
 
-### Dominios de nivel superior
 
-**gTLD - Generic Top Level Domains**
+### Frameworks del lado servidor 
 
-- Dominios originales. P. ej: **.com**, **.org**, **.net**, ...
-- Nuevos dominios. P. ej: **.bar**, **.blog**, **.download**, ...
+![Backend Frameworks](img/backend-frameworks.png)
 
 
-### Dominios de nivel superior
+### Frameworks del lado servidor 
 
-**sTLD - Sponsored Top Level Domains**
+- PHP: **Laravel**, **Symfony**.
+- JSP: **Spring**, **Struts**.
+- ASP: **ASP.NET**, **ASP.NET Core**.
+- Ruby: **Ruby on rails**.
+- Python: **Django**.
+- Node.js: **Express**. 
 
-- Dominios patrocinados por determinados colectivos. 
-- P. ej: **.cat**,  **.museum**, **.aero**, ...
+https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
 
 
-### Dominios de nivel superior
+### Resumen
 
-**ccTLD -Country Code Top Level Domains**
+![Desarrollo Backend](img/back-end-development.png)
 
-- Dominios asociados a un país.
-- P. ej: **.es**, **.fr**, **.cn**, **.io**, ...
 
 
-### Lista de TLD
+## Tecnologías para el frontend
 
-- [Lista de TLD en Wikipedia](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
-- [Lista actualizada de todos los TLD](https://www.iana.org/domains/root/db)
 
+### Lenguajes del lado del cliente
 
-### Servidores raíz
+- **Javascript**: 
 
-- También llamados TNS (Top Name Servers).
-- Son 13 en total. Pero tienen varias replicas
-- Se conocen como A, B, C, D, E, F, G, H, I, J, K, L y M.
-- Todos tienen la misma información.
-- Se reparten el trabajo de resolución.
-- Cada uno es una copia de seguridad del resto.
+![Desarrollo Backend](img/javascript.png)
 
-[Root Servers](http://www.root-servers.org/)
 
+### Frameworks del lado cliente 
 
+- **React**
+- **Angular**
+- **Vue**
 
-## DNS: Tipos de servidores
+![Desarrollo Backend](img/react-angular-vue.png)
 
-- Servidor primario (maestro)
-- Servidor secundario (esclavo)
-- Servidor caché
-- Servidor de reenvío
 
+### Resumen
 
-### Servidor primario (maestro)
+![Desarrollo Frontend](img/front-end-development.png)
 
-- Tiene autoridad sobre una zona.
-- Obtiene la información de sus zonas de sus archivos locales.
-- Todas las modificaciones sobre una zona se llevan a cabo en el servidor primario.
-- No necesita reenviar la consulta.
 
 
-### Servidor primario (maestro)
+## Modelo-Vista-Controlador
 
-![Servidor primario](img/dns-primary.png)
+![Modelo Vista Controlador](img/MVC.png)
 
 
-### Servidor secundario (esclavo)
+## Modelo-Vista-Controlador
 
-- Tiene información (sólo lectura) sobre algunas zonas.
-- Estos datos son copias de los servidores maestros.
-- Cuando cambia la información en un servidor maestro, el esclavo la copia simplemente para actualizarse.
-- Sólo atiende a peticiones de los clientes (resolvedores).
+- se ejecuta casi toda la lógica de aplicación en el backend. 
+- el servidor sirve múltiples vistas, cada vista es una página HTML. 
+- es una aplicación de múltiples páginas (MPA). 
 
 
-### Servidor secundario (esclavo)
+## Single Page Application
 
-![Servidor secundario](img/dns-secondary.png)
+![Aplicación de Página Única](img/SPA.png)
 
 
-### Servidor caché
+## Single Page Application
 
-- No tiene autoridad sobre ninguna zona.
-- En principio (cuando arranca) no es capaz de hacer ninguna resolución por si mismo.
-- Cuando recibe una consulta, la reenvía a servidores que puedan resolverla y cuando le responden, almacena la respuesta en memoria.
+- se ejecuta gran parte de la lógica de la aplicación en el frontend. 
+- el servidor sirve datos mediante una API web. 
+- principalmente se usan 2 formatos para el intercambio de datos:
+  - **XML**
+  - **JSON** 
 
 
-### Servidor caché
+## MVC vs SPA
 
-![Servidor caché](img/dns-cache.png)
+![MVC vs SPA](img/mvc-spa.png)
 
 
-### Servidor de reenvío
 
-- No posee autoridad sobre las zonas que resuelve.
-- Cuando reciben una consulta, la reenvían a los servidores que tienen configurados esperando que éstos la resuelvan.
+## Persistencia de los datos
 
+- Uso de archivos
+- Bases de datos relacionales
+  - Subtipo importante: **BBDD objeto-relacionales**.
+- Bases de datos no relacionales
+  - Subtipo importante: **BBDD noSQL**.
 
-### Servidor de reenvío
 
-![Servidor de reenvio](img/dns-reenvio.png)
+### Bases de datos relacionales
 
+![BBDD relacionales](img/SQL.png)
 
 
-## DNS: Resolución de nombres
+### Bases de datos relacionales
 
+- SQL Server 
+- Oracle
+- MySQL
+- MariaDB
+- PostgreSQL
+- SQLite
 
-### Procedimiento
 
-![Resolución DNS](img/dns-resolucion.png)
+### Bases de datos no relacionales (noSQL)
 
+![BBDD relacionales](img/noSQL.png)
 
-### Tipos de resoluciones
 
-- **Resolución directa**: Nombre --> IP
-- **Resolución inversa**: IP --> Nombre
+### Bases de datos no relacionales (noSQL)
 
-
-### Utilidades para consultas DNS
-
-- **nslookup**
-- **host**
-- **dig**
-
-
-### DIG
-#### Ejemplos de uso
-
-**Resolución directa**
-
-```bash
-# Consulta registro A
-dig  @8.8.8.8  www.google.es
-
-# Consulta cualquier registro
-dig  @8.8.8.8  -t ANY   google.es
-```
-
-**Resolución inversa**
-
-```bash
-# Consulta registro PTR
-dig  @8.8.8.8  -x 172.217.17.3
-```
-
-
-
-## DNS: Bind9
-
-Software usado en los servidores DNS. Versión 9.
-
-**`apt  install  bind9`**
-
-
-### Gestión del servicio
-
-```bash
-systemctl  start   bind9  # service bind9 start
-systemctl  restart bind9  # service bind9 restart
-systemctl  stop    bind9  # service bind9 stop
-systemctl  status  bind9  # service bind9 status
-
-systemctl  enable  bind9  
-systemctl  disable bind9  
-```
-
-
-### Configuración
-#### Directorios y Archivos
-
-- **`/etc/bind`**: Archivos principales
-  - **`named.conf`** : fichero principal.
-  - **`named.conf.options`** : opciones genéricas.
-  - **`named.conf.local`** : especificación local.
-- **`/var/lib/bind`**: Archivos de zonas primarias.
-  - **`db.example.com`**: ejemplo de zona directa
-  - **`db.172.16`**: ejemplo de zona inversa
-- **`/var/cache/bind`**: Archivos de zonas secundarias.
-
-
-### named.conf.local
-#### Ejemplo
-
-```
-zone "example.com" {
-  type master;
-  file "/var/lib/bind/db.example.com";
-};
-
-zone "16.172.in-addr.arpa" {
-  type master;
-  file "/var/lib/bind/db.172.16";
-};
-```
-
-
-### named.conf.options
-#### Ejemplo
-
-```
-    forwarders {
-                8.8.8.8;
-                8.8.4.4;
-         };
-```
-
-
-### Registros de recursos (RR)
-
-- **A** = Address → correspondencia nombre - IPv4
-- **AAAA** → correspondencia nombre - IPv6.
-- **CNAME** = Canonical name → alias o apodo para nombre.
-- **MX** = Mail Exchanger → servidores de correo del dominio.
-- **NS** = Name Server → servidores de nombres oficiales del dominio.
-- **PTR** = PoinTeR → correspondencia IP - nombre.
-- **SOA** = Start Of Authority → autoridad sobre el dominio de nombres.
-
-
-### db.example.com
-#### Ejemplo zona directa
-
-```
-$ORIGIN example.com.
-$TTL 1d
-
-@          SOA  ns1  admin  (
-           1  ; serial
-           6h ; refresh
-           1h ; retry
-           1w ; expire
-           6h ; nxdomain
-)
-
-           NS ns1
-           NS ns2
-
-ns1        A  172.16.0.101
-ns2        A  172.16.0.102
-pc01       A  172.16.0.201
-pc02       A  172.16.0.202
-```
-
-
-### db.172.16
-#### Ejemplo zona inversa
-
-```
-$ORIGIN 16.172.in-addr.arpa.
-$TTL 1d
-
-@          SOA  ns1.example.com.  admin.example.com. (
-           1  ; serial
-           6h ; refresh
-           1h ; retry
-           1w ; expire
-           6h ; nxdomain
-)
-
-           NS ns1.example.com.
-           NS ns2.example.com.
-
-101.0      PTR ns1.example.com.
-102.0      PTR ns2.example.com.
-201.0      PTR pc01.example.com.
-202.0      PTR pc02.example.com.
-```
-
-
-### Herramientas de comprobación
-
-```
-named-checkconf  -z
-named-checkzone  example.com  /var/lib/bind/db.example.com
-named-checkzone  16.172.in-addr.arpa  /var/lib/bind/db.172.16
-```
-
-![named checkconf checkzone](assets/named-checkconf-checkzone.png)
+- Cassandra
+- MongoDB
+- Redis
+- CouchDB

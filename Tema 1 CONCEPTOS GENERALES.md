@@ -56,12 +56,12 @@
 
 ### FQDN
 
-![Árbol DNS](assets/dns-tree.png)
+![Árbol DNS](img/dns-tree.png)
 
 
 ### Niveles
 
-![Niveles DNS](assets/dns-niveles.png)
+![Niveles DNS](img/dns-niveles.png)
 
 
 ### Dominios de nivel superior
@@ -125,7 +125,7 @@
 
 ### Servidor primario (maestro)
 
-![Servidor primario](assets/dns-primary.png)
+![Servidor primario](img/dns-primary.png)
 
 
 ### Servidor secundario (esclavo)
@@ -138,7 +138,7 @@
 
 ### Servidor secundario (esclavo)
 
-![Servidor secundario](assets/dns-secondary.png)
+![Servidor secundario](img/dns-secondary.png)
 
 
 ### Servidor caché
@@ -150,7 +150,7 @@
 
 ### Servidor caché
 
-![Servidor caché](assets/dns-cache.png)
+![Servidor caché](img/dns-cache.png)
 
 
 ### Servidor de reenvío
@@ -161,7 +161,7 @@
 
 ### Servidor de reenvío
 
-![Servidor de reenvio](assets/dns-reenvio.png)
+![Servidor de reenvio](img/dns-reenvio.png)
 
 
 
@@ -170,7 +170,7 @@
 
 ### Procedimiento
 
-![Resolución DNS](assets/dns-resolucion.png)
+![Resolución DNS](img/dns-resolucion.png)
 
 
 ### Tipos de resoluciones

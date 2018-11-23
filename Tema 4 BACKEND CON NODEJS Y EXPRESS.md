@@ -499,24 +499,24 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 ###  Postman: Ejecución
 
-![Postman](assets/postman.png)
+![Postman](img/postman.png)
 
 
 ###  Postman: POST Header
 
-![Postman](assets/postman-post-header.png)
+![Postman](img/postman-post-header.png)
 
 
 ###  Postman: POST Body
 
-![Postman](assets/postman-post-body.png)
+![Postman](img/postman-post-body.png)
 
 
 ###  Postman: PUT Header
 
-![Postman](assets/postman-put-header.png)
+![Postman](img/postman-put-header.png)
 
 
 ###  Postman: PUT Body
 
-![Postman](assets/postman-put-body.png)
+![Postman](img/postman-put-body.png)

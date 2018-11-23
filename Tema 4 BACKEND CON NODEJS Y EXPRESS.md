@@ -40,11 +40,11 @@
 - Existe una aplicación funcional de ejemplo.
 - El código está disponible en [`https://github.com/jamj2000/tienda0`](https://github.com/jamj2000/tienda0)
 - Los archivos usados para el backend son:
-  - **package.json**
-  - **server.js**
-  - **models.js**
-  - **routes.js**
-  - **config.js**
+  - **package.json** (paquete)
+  - **server.js** (servidor)
+  - **models.js** (modelos de datos)
+  - **routes.js** (las rutas equivalente a los controladores)
+  - **config.js** (cofigurar el proyecto)
 
 
 
@@ -58,6 +58,7 @@
 ![v8 engine](img/v8-engine.png)
 
 Node.js® es un entorno de ejecución para JavaScript construido con el **motor de JavaScript V8 de Chrome**.
+(Es de google para utilizar en node,js)
 
 
 ### Instalación

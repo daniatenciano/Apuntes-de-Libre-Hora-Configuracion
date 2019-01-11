@@ -43,7 +43,7 @@
 
 ### MPA
 
-![MPA](assets/mpa.png)
+![MPA](mpa.png)
 
 - Suelen seguir la arquitectura MVC (Modelo-Vista-Controlador)
 - Mayor carga en el servidor.
@@ -54,7 +54,7 @@
 
 ### SPA
 
-![SPA](assets/spa.png)
+![SPA](spa.png)
 
 - Se libera de carga al servidor.
 - Es el cliente el que genera la vista con los datos que obtiene del servidor.
@@ -88,7 +88,7 @@ Los mÃ¡s usados actualmente (Enero 2018)
 
 ### CaracterÃ­sticas generales
 
-![Angular, React, Vue](assets/angular-react-vue.png)
+![Angular, React, Vue](angular-react-vue.png)
 
 - Frameworks exclusivos para desarrollo Frontend.
 - Permiten crear y mantener aplicaciones web de una sola pÃ¡gina (SPA).
